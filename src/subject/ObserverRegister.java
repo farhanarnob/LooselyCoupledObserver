@@ -1,7 +1,11 @@
 package subject;
 
+import custom_observer.CustomObserver;
+
 public interface ObserverRegister {
-    public void registerObserver();
-    public void removeObserver();
-    public void notifyObserver();
+    void registerObserver(CustomObserver customObserver);
+
+    void removeObserver(CustomObserver customObserver);
+
+    void notifyObserver();
 }
