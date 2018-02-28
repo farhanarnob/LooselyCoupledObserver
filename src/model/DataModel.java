@@ -2,7 +2,7 @@ package model;
 
 public class DataModel {
     private int power = 10;
-    private String powerName = "Power of Heaven";
+    private String powerName = "Power Of java";
 
     public int getPower() {
         return power;

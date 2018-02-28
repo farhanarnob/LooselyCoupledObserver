@@ -2,3 +2,17 @@
 \.idea/vcs\.xml
 
 \.idea/workspace\.xml
+
+out/production/Loosely Couple Observer/displayer/Display\.class
+
+out/production/Loosely Couple Observer/main/Main\.class
+
+out/production/Loosely Couple Observer/model/DataModel\.class
+
+out/production/Loosely Couple Observer/want_to_observe/DisplayDataOne\.class
+
+out/production/Loosely Couple Observer/want_to_observe/DisplayDataThree\.class
+
+out/production/Loosely Couple Observer/want_to_observe/DisplayDataTwo\.class
+
+out/production/Loosely Couple Observer/want_to_provide_data/DataProvider\.class

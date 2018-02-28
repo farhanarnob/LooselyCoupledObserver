@@ -5,7 +5,6 @@ import want_to_observe.DisplayDataThree;
 import want_to_observe.DisplayDataTwo;
 import want_to_provide_data.DataProvider;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -32,31 +31,31 @@ public class Main {
                 int n = reader.nextInt(); // Scans the next token of the input as an int.
                 switch (n) {
                     case 1: {
-                        dataProvider.registerObserver(displayDataOne);
+                        dataProvider.addObserver(displayDataOne);
                         break;
                     }
                     case 2: {
-                        dataProvider.registerObserver(displayDataTwo);
+                        dataProvider.addObserver(displayDataTwo);
                         break;
                     }
                     case 3: {
-                        dataProvider.registerObserver(displayDataThree);
+                        dataProvider.addObserver(displayDataThree);
                         break;
                     }
                     case 4: {
-                        dataProvider.removeObserver(displayDataOne);
+                        dataProvider.deleteObserver(displayDataOne);
                         break;
                     }
                     case 5: {
-                        dataProvider.removeObserver(displayDataTwo);
+                        dataProvider.deleteObserver(displayDataTwo);
                         break;
                     }
                     case 6: {
-                        dataProvider.removeObserver(displayDataThree);
+                        dataProvider.deleteObserver(displayDataThree);
                         break;
                     }
                     case 7: {
-                        dataProvider.notifyObserver();
+                        dataProvider.dataModelChanged();
                         break;
                     }
                     case 8: {
@@ -70,7 +69,7 @@ public class Main {
                         int power = readers.nextInt();
 
                         dataProvider.getDataModel().setPower(power).setPowerName(powerName);
-                        dataProvider.notifyObserver();
+                        dataProvider.dataModelChanged();
                         break;
                     }
                     default: {
@@ -79,11 +78,6 @@ public class Main {
                 }
             } catch (Exception e) {
                 continuing = false;
-            }
-            try {
-                Runtime.getRuntime().exec("cls");
-            } catch (IOException ignored) {
-
             }
         }
     }
